@@ -175,6 +175,56 @@ function Projects() {
   );
 }
 
+function Experience() {
+  const experiences = [
+    {
+      role: "Hackathon Participant",
+      org: "VJ Hackathon 2025",
+      period: "2025",
+      blurb:
+        "Collaborated in a fast-paced environment to design and prototype a solution under time constraints — sharpened problem-solving, teamwork, and rapid prototyping skills.",
+    },
+    {
+      role: "Self-Driven Project Builder",
+      org: "Personal / Academic",
+      period: "2024 — 2026",
+      blurb:
+        "Shipped end-to-end projects spanning machine learning (hazardous gas prediction, facial recognition), web apps (handicraft store, hospital system), and mobile (tourism app).",
+    },
+  ];
+
+  return (
+    <section id="experience" className="relative py-24 md:py-32 border-t border-white/10">
+      <div className="absolute inset-0 grid-bg opacity-30" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">Experience</p>
+        <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold mb-16">
+          Where I&apos;ve <span className="text-gradient">learned</span>.
+        </h2>
+        <div className="grid md:grid-cols-2 gap-5">
+          {experiences.map((e) => (
+            <article
+              key={e.role}
+              className="group relative p-7 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-accent/40 transition-all overflow-hidden"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity radial-glow" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-muted-foreground">{e.period}</span>
+                  <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
+                </div>
+                <h3 className="text-2xl font-bold mb-1 group-hover:text-gradient transition-colors">{e.role}</h3>
+                <p className="text-sm text-accent mb-4">{e.org}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{e.blurb}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Certifications() {
   return (
     <section id="certifications" className="relative py-24 md:py-32 border-t border-white/10">

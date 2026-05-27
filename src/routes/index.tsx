@@ -181,24 +181,26 @@ function Skills() {
 
 function Certifications() {
   return (
-    <section id="certifications" className="max-w-6xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
-      <div className="grid md:grid-cols-12 gap-10">
-        <p className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          (04) Credentials
-        </p>
-        <ul className="md:col-span-9 space-y-4">
+    <section id="certifications" className="relative py-24 md:py-32 border-t border-white/10">
+      <div className="absolute inset-0 grid-bg opacity-30" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">Credentials</p>
+        <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold mb-12">
+          Certified in <span className="text-gradient">cloud &amp; AI</span>.
+        </h2>
+        <ul className="space-y-3">
           {certifications.map((c, i) => (
             <li
               key={c}
-              className="flex items-start gap-6 py-4 border-b border-border group"
+              className="flex items-center gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-accent/40 hover:bg-white/[0.04] transition-all group"
             >
-              <span className="font-mono text-xs text-muted-foreground pt-2">
+              <span className="font-mono text-xs text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="text-lg md:text-xl flex-1 group-hover:text-accent transition-colors">
+              <span className="text-base md:text-lg flex-1">
                 {c}
               </span>
-              <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-accent transition-colors" />
+              <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
             </li>
           ))}
         </ul>
@@ -234,16 +236,14 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-secondary py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-20">
+    <section id="contact" className="relative py-24 md:py-32 border-t border-white/10 overflow-hidden">
+      <div className="absolute inset-0 grid-bg opacity-40" />
+      <div className="absolute inset-0 radial-glow" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-20">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
-            (05) Say hello
-          </p>
-          <h2 className="font-display text-5xl md:text-7xl leading-none mb-10">
-            Let&apos;s build
-            <br />
-            <span className="italic text-accent">something</span>.
+          <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">Contact</p>
+          <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold mb-10">
+            Let&apos;s build <span className="text-gradient">something</span>.
           </h2>
           <div className="space-y-4 text-sm">
             <a
@@ -284,7 +284,7 @@ function Contact() {
               name="name"
               required
               maxLength={80}
-              className="w-full bg-transparent border-b border-foreground/30 focus:border-accent outline-none py-3 text-lg transition-colors"
+              className="w-full bg-white/[0.02] border border-white/10 rounded-xl focus:border-accent outline-none px-4 py-3 text-base mt-2 transition-colors"
             />
           </div>
           <div>
@@ -294,7 +294,7 @@ function Contact() {
               type="email"
               required
               maxLength={160}
-              className="w-full bg-transparent border-b border-foreground/30 focus:border-accent outline-none py-3 text-lg transition-colors"
+              className="w-full bg-white/[0.02] border border-white/10 rounded-xl focus:border-accent outline-none px-4 py-3 text-base mt-2 transition-colors"
             />
           </div>
           <div>
@@ -303,14 +303,14 @@ function Contact() {
               name="message"
               required
               maxLength={1000}
-              rows={4}
-              className="w-full bg-transparent border-b border-foreground/30 focus:border-accent outline-none py-3 text-lg resize-none transition-colors"
+              rows={5}
+              className="w-full bg-white/[0.02] border border-white/10 rounded-xl focus:border-accent outline-none px-4 py-3 text-base mt-2 resize-none transition-colors"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full hover:bg-accent transition-colors disabled:opacity-50"
+            className="group inline-flex items-center gap-3 bg-gradient-to-r from-violet-500 via-sky-400 to-cyan-300 text-background font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {loading ? "Sending…" : "Send message"}
             <ArrowUpRight className="size-4 group-hover:rotate-45 transition-transform" />
@@ -323,9 +323,9 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-white/10">
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} Chandana Vilasagaram. Crafted with care.</p>
+        <p>© 2026 Chandana Vilasagaram. Crafted with care.</p>
         <p className="font-mono">Hyderabad · IN</p>
       </div>
     </footer>
@@ -340,7 +340,6 @@ function Index() {
         <Hero />
         <About />
         <Projects />
-        <Skills />
         <Certifications />
         <Contact />
       </main>

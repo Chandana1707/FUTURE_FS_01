@@ -79,7 +79,7 @@ function Hero() {
         <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">
           Hello, I&apos;m
         </p>
-        <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight font-extrabold">
+        <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight" style={{ fontFamily: 'var(--font-name)', fontWeight: 400 }}>
           Chandana<br />Vilasagaram
         </h1>
         <h2 className="mt-6 text-[clamp(1.25rem,4vw,2.5rem)] leading-[1.2] tracking-tight font-bold text-muted-foreground">

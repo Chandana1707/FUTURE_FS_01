@@ -71,47 +71,30 @@ const contactSchema = z.object({
 
 function Hero() {
   return (
-    <section className="grain relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 pt-20 md:pt-32 pb-16 md:pb-24">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
-          Portfolio · 2026
+    <section id="top" className="relative overflow-hidden min-h-screen flex items-center">
+      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute inset-0 radial-glow" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-40 pb-24 w-full">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">
+          Hello
         </p>
-        <h1 className="font-display text-[clamp(3rem,10vw,9rem)] leading-[0.95] tracking-tight">
-          Chandana
-          <br />
-          <span className="italic text-accent">Vilasagaram</span>
+        <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] leading-[1] tracking-tight font-extrabold">
+          Engineer in the<br />making —<br />
+          <span className="text-gradient">frontend &amp; ML</span> focused.
         </h1>
-        <div className="mt-10 grid md:grid-cols-3 gap-8 items-end">
-          <p className="md:col-span-2 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Computer Science engineer based in Hyderabad. I build calm, considered
-            interfaces and tinker with machine learning systems that solve real
-            problems for real places.
-          </p>
-          <div className="flex flex-col gap-2 text-sm">
-            <span className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="size-4" /> Hyderabad, India
-            </span>
-            <span className="flex items-center gap-2 text-muted-foreground">
-              <span className="size-2 rounded-full bg-accent animate-pulse" />
-              Open to internships
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="border-y border-border/60 overflow-hidden bg-foreground text-background py-5">
-        <div className="marquee flex gap-12 whitespace-nowrap font-display text-3xl md:text-4xl">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex gap-12 shrink-0">
-              {["Frontend", "Machine Learning", "Databases", "Problem Solving", "React", "Python", "Cloud"].map(
-                (w) => (
-                  <span key={w} className="flex items-center gap-12">
-                    <span className="italic">{w}</span>
-                    <span className="text-accent">✦</span>
-                  </span>
-                ),
-              )}
-            </div>
-          ))}
+        <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+          I&apos;m Chandana, a Computer Science student at CMR Engineering College.
+          I love building responsive web interfaces, exploring how machine learning
+          can solve real-world problems, and shipping clean, production-ready projects.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a href="#projects" className="px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity">
+            View Projects
+          </a>
+          <a href="#contact" className="px-6 py-3 rounded-full border border-white/15 hover:bg-white/5 transition-colors font-medium">
+            Get in touch
+          </a>
         </div>
       </div>
     </section>
@@ -120,33 +103,29 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32">
-      <div className="grid md:grid-cols-12 gap-10">
-        <p className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          (01) About
+    <section id="about" className="relative py-24 md:py-32">
+      <div className="absolute inset-0 grid-bg opacity-50" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">About</p>
+        <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold max-w-5xl">
+          Engineer in the making — <span className="text-gradient">frontend &amp; AI</span> focused.
+        </h2>
+        <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+          I&apos;m Chandana, a Computer Science student at CMR Engineering College.
+          I love designing responsive interfaces, working with databases, and exploring
+          how machine learning can be wired into real products. My current focus:
+          shipping clean, production-ready web and ML projects.
         </p>
-        <div className="md:col-span-9 space-y-6">
-          <h2 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-            A motivated student who treats code as a craft, not a checklist.
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Currently pursuing a B.Tech in Computer Science at CMR Engineering College
-            with a CGPA of <span className="text-foreground">8.62</span>. I&apos;m drawn
-            to the intersection of clean frontend work, thoughtful databases, and
-            ML-driven systems — especially when the result helps people in places
-            technology often forgets.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-border">
-            {[
-              { k: "8.62", v: "Current CGPA" },
-              { k: "90.2%", v: "Intermediate" },
-              { k: "10/10", v: "SSC GPA" },
-              { k: "4+", v: "Certifications" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-4xl md:text-5xl text-accent">{s.k}</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">
-                  {s.v}
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8">Tech Stack</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {skillGroups.map((g) => (
+              <div key={g.label} className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-accent/40 transition-colors">
+                <div className="text-xs uppercase tracking-widest text-accent font-semibold mb-3">{g.label}</div>
+                <div className="flex flex-wrap gap-2">
+                  {g.items.map((i) => (
+                    <span key={i} className="text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10">{i}</span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -159,40 +138,34 @@ function About() {
 
 function Projects() {
   return (
-    <section id="projects" className="bg-foreground text-background py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-background/50 mb-4">
-              (02) Selected work
-            </p>
-            <h2 className="font-display text-4xl md:text-6xl">
-              Things I&apos;ve <span className="italic text-accent">built</span>.
-            </h2>
-          </div>
-        </div>
-        <div className="divide-y divide-background/15 border-y border-background/15">
+    <section id="projects" className="relative py-24 md:py-32 border-t border-white/10">
+      <div className="absolute inset-0 grid-bg opacity-30" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">Projects</p>
+        <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold mb-16">
+          Things I&apos;ve <span className="text-gradient">built</span>.
+        </h2>
+        <div className="grid md:grid-cols-2 gap-5">
           {projects.map((p) => (
             <article
               key={p.title}
-              className="group grid md:grid-cols-12 gap-6 py-8 md:py-10 cursor-default hover:bg-background/[0.03] transition-colors px-2"
+              className="group relative p-7 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-accent/40 transition-all overflow-hidden"
             >
-              <div className="md:col-span-1 text-sm text-background/50 font-mono">{p.year}</div>
-              <div className="md:col-span-5">
-                <h3 className="font-display text-2xl md:text-3xl group-hover:text-accent transition-colors">
-                  {p.title}
-                </h3>
-              </div>
-              <p className="md:col-span-4 text-background/70 text-sm leading-relaxed">{p.blurb}</p>
-              <div className="md:col-span-2 flex md:justify-end items-start gap-2 flex-wrap">
-                {p.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="text-[10px] uppercase tracking-wider px-2 py-1 border border-background/20 rounded-full text-background/70"
-                  >
-                    {t}
-                  </span>
-                ))}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity radial-glow" />
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-muted-foreground">{p.year}</span>
+                  <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-gradient transition-colors">{p.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{p.blurb}</p>
+                <div className="flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <span key={t} className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-muted-foreground">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
@@ -203,27 +176,7 @@ function Projects() {
 }
 
 function Skills() {
-  return (
-    <section id="skills" className="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32">
-      <div className="grid md:grid-cols-12 gap-10">
-        <p className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          (03) Toolkit
-        </p>
-        <div className="md:col-span-9 space-y-10">
-          {skillGroups.map((g) => (
-            <div key={g.label} className="grid md:grid-cols-12 gap-4 items-baseline border-b border-border pb-6">
-              <div className="md:col-span-3 font-display text-2xl italic text-accent">{g.label}</div>
-              <div className="md:col-span-9 flex flex-wrap gap-x-6 gap-y-2 text-lg">
-                {g.items.map((i) => (
-                  <span key={i}>{i}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }
 
 function Certifications() {

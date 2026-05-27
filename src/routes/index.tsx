@@ -297,10 +297,12 @@ function Contact() {
               href="mailto:vilasagaramchandana@gmail.com"
               className="flex items-center gap-3 hover:text-accent transition-colors"
             >
-              <Mail className="size-4" /> vilasagaramchandana@gmail.com
+              <Mail className="size-4" />
+              <span>vilasagaramchandana@gmail.com</span>
             </a>
             <a href="tel:+919391053897" className="flex items-center gap-3 hover:text-accent transition-colors">
-              <Phone className="size-4" /> +91 93910 53897
+              <Phone className="size-4" />
+              <span>+91 93910 53897</span>
             </a>
             <a
               href="https://github.com/Chandana1707"
@@ -308,7 +310,8 @@ function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3 hover:text-accent transition-colors"
             >
-              <Github className="size-4" /> github.com/Chandana1707
+              <Github className="size-4" />
+              <span>github.com/Chandana1707</span>
             </a>
             <a
               href="https://www.linkedin.com/in/chandanavilasagaram"
@@ -316,7 +319,8 @@ function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3 hover:text-accent transition-colors"
             >
-              <Linkedin className="size-4" /> /in/chandanavilasagaram
+              <Linkedin className="size-4" />
+              <span>/in/chandanavilasagaram</span>
             </a>
           </div>
         </div>

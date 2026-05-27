@@ -4,7 +4,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { z } from "zod";
-import { ArrowUpRight, Mail, MapPin, Github, Linkedin, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, Github, Linkedin, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -173,10 +173,6 @@ function Projects() {
       </div>
     </section>
   );
-}
-
-function Skills() {
-  return null;
 }
 
 function Certifications() {

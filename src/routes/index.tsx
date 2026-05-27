@@ -386,6 +386,7 @@ function Index() {
         <Hero />
         <About />
         <Projects />
+        <Experience />
         <Certifications />
         <Contact />
       </main>

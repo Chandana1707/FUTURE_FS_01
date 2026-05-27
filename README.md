@@ -5,7 +5,7 @@ A fully responsive personal portfolio website built as part of **Task 1** of the
 ---
 
 ## 🚀 Live Demo
-> [https://chandanavilasagaram-portfolio.lovable.app](#)
+https://chandanavilasagaram-portfolio.lovable.app
 
 ---
 

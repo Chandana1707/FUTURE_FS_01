@@ -230,22 +230,22 @@ function Experience() {
 function Education() {
   const education = [
     {
-      degree: "B.Tech in Computer Science & Engineering (AI & ML)",
+      degree: "B.Tech in Computer Science & Engineering",
       school: "CMR Engineering College, Medchal, Hyderabad",
       period: "2023 — 2027",
-      score: "CGPA: 7.6",
+      score: "CGPA: 8.6",
     },
     {
       degree: "Intermediate (MPC)",
       school: "Sri Chaitanya Junior College, Hyderabad",
       period: "2021 — 2023",
-      score: "Marks: 679",
+      score: "Marks: 902",
     },
     {
       degree: "SSC",
       school: "Sri Chaitanya School, Hyderabad",
       period: "2020 — 2021",
-      score: "GPA: 9.3",
+      score: "GPA: 10",
     },
   ];
 

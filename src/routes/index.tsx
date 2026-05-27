@@ -77,12 +77,14 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
       <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-40 pb-24 w-full">
         <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">
-          Hello
+          Hello, I&apos;m
         </p>
-        <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] leading-[1] tracking-tight font-extrabold">
-          Engineer in the<br />making —<br />
-          <span className="text-gradient">frontend &amp; ML</span> focused.
+        <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight font-extrabold">
+          Chandana<br />Vilasagaram
         </h1>
+        <h2 className="mt-6 text-[clamp(1.25rem,4vw,2.5rem)] leading-[1.2] tracking-tight font-bold text-muted-foreground">
+          Engineer in the making — <span className="text-gradient">frontend &amp; ML</span> focused.
+        </h2>
         <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
           I&apos;m Chandana, a Computer Science student at CMR Engineering College.
           I love building responsive web interfaces, exploring how machine learning
@@ -216,6 +218,61 @@ function Experience() {
                 <h3 className="text-2xl font-bold mb-1 group-hover:text-gradient transition-colors">{e.role}</h3>
                 <p className="text-sm text-accent mb-4">{e.org}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">{e.blurb}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Education() {
+  const education = [
+    {
+      degree: "B.Tech in Computer Science & Engineering (AI & ML)",
+      school: "CMR Engineering College, Medchal, Hyderabad",
+      period: "2023 — 2027",
+      score: "CGPA: 7.6",
+    },
+    {
+      degree: "Intermediate (MPC)",
+      school: "Sri Chaitanya Junior College, Hyderabad",
+      period: "2021 — 2023",
+      score: "Marks: 679",
+    },
+    {
+      degree: "SSC",
+      school: "Sri Chaitanya School, Hyderabad",
+      period: "2020 — 2021",
+      score: "GPA: 9.3",
+    },
+  ];
+
+  return (
+    <section id="education" className="relative py-24 md:py-32 border-t border-white/10">
+      <div className="absolute inset-0 grid-bg opacity-30" />
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">Education</p>
+        <h2 className="text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] tracking-tight font-extrabold mb-16">
+          Where I <span className="text-gradient">studied</span>.
+        </h2>
+        <div className="space-y-5">
+          {education.map((e) => (
+            <article
+              key={e.degree}
+              className="group relative p-7 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-accent/40 transition-all overflow-hidden"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity radial-glow" />
+              <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-1 group-hover:text-gradient transition-colors">{e.degree}</h3>
+                  <p className="text-sm text-accent">{e.school}</p>
+                </div>
+                <div className="flex items-center gap-6">
+                  <span className="font-mono text-xs text-muted-foreground">{e.period}</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-muted-foreground">{e.score}</span>
+                </div>
               </div>
             </article>
           ))}
@@ -387,6 +444,7 @@ function Index() {
         <About />
         <Projects />
         <Experience />
+        <Education />
         <Certifications />
         <Contact />
       </main>

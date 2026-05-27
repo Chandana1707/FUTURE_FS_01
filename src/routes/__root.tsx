@@ -75,10 +75,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Chandana Vilasagaram — CS Engineer & Frontend Developer" },
       { name: "description", content: "Portfolio of Chandana Vilasagaram — Computer Science student, frontend developer, and ML enthusiast based in Hyderabad, India." },
       { name: "author", content: "Chandana Vilasagaram" },
-      { property: "og:title", content: "Chandana Vilasagaram — Portfolio" },
-      { property: "og:description", content: "CS Engineer, frontend developer, ML enthusiast — projects, skills, and certifications." },
+      { property: "og:title", content: "Chandana Vilasagaram — CS Engineer & Frontend Developer" },
+      { property: "og:description", content: "Portfolio of Chandana Vilasagaram — Computer Science student, frontend developer, and ML enthusiast based in Hyderabad, India." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Chandana Vilasagaram — CS Engineer & Frontend Developer" },
+      { name: "twitter:description", content: "Portfolio of Chandana Vilasagaram — Computer Science student, frontend developer, and ML enthusiast based in Hyderabad, India." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e46c8f2e-b9f8-472e-81ea-53782685cc62/id-preview-0283cb0b--8e958bcc-13ce-4b23-93ce-f342b79e6460.lovable.app-1779859451346.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e46c8f2e-b9f8-472e-81ea-53782685cc62/id-preview-0283cb0b--8e958bcc-13ce-4b23-93ce-f342b79e6460.lovable.app-1779859451346.png" },
     ],
     links: [
       {

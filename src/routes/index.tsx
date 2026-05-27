@@ -243,7 +243,7 @@ function Education() {
     },
     {
       degree: "SSC",
-      school: "Sri Chaitanya School, Hyderabad",
+      school: "Kallam Anji Reddy Vidyalaya, Hyderabad",
       period: "2020 — 2021",
       score: "GPA: 10",
     },

@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Chandana Vilasagaram — CS Engineer & Frontend Developer" },
+      { name: "description", content: "Portfolio of Chandana Vilasagaram — Computer Science student, frontend developer, and ML enthusiast based in Hyderabad, India." },
+      { name: "author", content: "Chandana Vilasagaram" },
+      { property: "og:title", content: "Chandana Vilasagaram — Portfolio" },
+      { property: "og:description", content: "CS Engineer, frontend developer, ML enthusiast — projects, skills, and certifications." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

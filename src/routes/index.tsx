@@ -77,12 +77,14 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
       <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-40 pb-24 w-full">
         <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6 font-semibold">
-          Hello
+          Hello, I&apos;m
         </p>
-        <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] leading-[1] tracking-tight font-extrabold">
-          Engineer in the<br />making —<br />
-          <span className="text-gradient">frontend &amp; ML</span> focused.
+        <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight font-extrabold">
+          Chandana<br />Vilasagaram
         </h1>
+        <h2 className="mt-6 text-[clamp(1.25rem,4vw,2.5rem)] leading-[1.2] tracking-tight font-bold text-muted-foreground">
+          Engineer in the making — <span className="text-gradient">frontend &amp; ML</span> focused.
+        </h2>
         <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
           I&apos;m Chandana, a Computer Science student at CMR Engineering College.
           I love building responsive web interfaces, exploring how machine learning

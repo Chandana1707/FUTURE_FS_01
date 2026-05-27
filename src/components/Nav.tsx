@@ -14,6 +14,7 @@ export function Nav() {
             ["About", "#about"],
             ["Projects", "#projects"],
             ["Experience", "#experience"],
+            ["Education", "#education"],
             ["Contact", "#contact"],
           ].map(([label, href]) => (
             <a

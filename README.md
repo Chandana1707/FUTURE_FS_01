@@ -89,27 +89,7 @@ npm run dev
 
 ---
 
-## 🌍 Deployment
 
-This project is deployed using **Lovable**.
-
-To deploy your own version:
-1. Go to [lovable.dev](https://lovable.dev)
-2. Import or clone this project
-3. Click **"Publish"** button on the top right
-4. Lovable will instantly generate a live link for your project
-
----
-
-## 🎓 Internship Details
-
-- **Program:** Full Stack Web Development Internship
-- **Organization:** Future Interns
-- **Task:** Task 1 — Personal Professional Portfolio Website
-- **College:** CMR Engineering College
-
-
----
 
 ## 👩‍💻 Author
 
